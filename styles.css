@@ -1,0 +1,100 @@
+:root {
+  color-scheme: light;
+  --ink: #282c2b;
+  --muted: #626863;
+  --link: #176653;
+  --rule: #dde2de;
+  --draft: #824550;
+}
+
+* { box-sizing: border-box; }
+html { scroll-padding-top: 24px; }
+body {
+  margin: 0;
+  background: #fff;
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+a:hover { color: var(--ink); }
+a:focus-visible, summary:focus-visible { outline: 2px solid var(--link); outline-offset: 5px; }
+[hidden] { display: none !important; }
+p { margin: 0 0 18px; }
+h1, h2, h3 { margin: 0; line-height: 1.3; font-weight: 500; }
+h1, h2 { font-family: Georgia, "Times New Roman", serif; }
+h1 { font-size: 36px; white-space: nowrap; }
+h2 { font-size: 25px; margin-bottom: 22px; }
+h3 { font-size: 17px; line-height: 1.5; font-weight: 600; }
+h3 a { text-decoration: none; }
+h3 a:hover { text-decoration: underline; }
+.page { max-width: 1060px; margin: 0 auto; padding: 76px 40px 30px; }
+.layout { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 76px; }
+.profile { align-self: start; }
+.position { margin: 7px 0 26px; color: var(--muted); font-size: 15px; }
+.portrait { display: block; width: 100%; height: auto; margin-bottom: 25px; border-radius: 3px; }
+.profile-details { font-size: 15px; overflow-wrap: anywhere; }
+.profile-details p { margin-bottom: 20px; }
+.muted, .paper-meta, .cv-date { color: var(--muted); }
+.cv-date { font-size: 12px; }
+.file-type { font-size: 11px; margin-left: 5px; font-weight: 500; white-space: nowrap; }
+.introduction { padding: 3px 0 26px; }
+.intro-lead { font-size: 19px; line-height: 1.6; }
+.draft-note { color: var(--draft); font-size: 12px; line-height: 1.6; margin: 24px 0 0; }
+section { padding: 26px 0 4px; border-top: 1px solid var(--rule); }
+.paper { margin-bottom: 26px; }
+.paper-meta { font-size: 14px; margin: 5px 0 7px; }
+.paper-description { font-size: 15px; margin: 12px 0; }
+.paper-links { display: flex; flex-wrap: wrap; align-items: baseline; gap: 15px; margin: 11px 0 0; font-size: 14px; }
+.sample-label { font-size: 12px; color: var(--draft); }
+details { margin-top: 9px; }
+summary { width: fit-content; cursor: pointer; color: var(--link); font-size: 14px; }
+summary:hover { text-decoration: underline; text-underline-offset: 4px; }
+details p { font-size: 15px; line-height: 1.75; margin: 12px 0 0; }
+.publication { font-size: 14px; margin: 8px 0 0; }
+footer { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; border-top: 1px solid var(--rule); padding-top: 22px; margin-top: 12px; color: var(--muted); font-size: 12px; }
+.top-nav { display: flex; justify-content: flex-end; gap: 26px; padding-bottom: 30px; font-size: 14px; }
+.skip-link { position: absolute; top: 8px; left: 16px; padding: 6px 12px; background: white; transform: translateY(-180%); }
+.skip-link:focus { transform: translateY(0); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+
+@media (max-width: 850px) {
+  .page { padding: 46px 28px 28px; }
+  .layout { grid-template-columns: 220px minmax(0, 1fr); gap: 40px; }
+  h1 { font-size: 30px; }
+}
+
+@media (max-width: 650px) {
+  .page { padding: 32px 24px 24px; max-width: 570px; }
+  .layout { grid-template-columns: minmax(0, 1fr); gap: 28px; }
+  .profile { display: grid; grid-template-columns: minmax(0, 1fr) 112px; column-gap: 18px; }
+  h1 { grid-column: 1 / -1; font-size: 34px; }
+  .position { grid-column: 1 / -1; margin: 5px 0 22px; }
+  .portrait { grid-column: 2; grid-row: 3; margin: 0; }
+  .profile-details { grid-column: 1; grid-row: 3; font-size: 13px; }
+  .profile-details p { margin-bottom: 13px; }
+  .profile-details p:last-child { margin-bottom: 0; }
+  .intro-lead { font-size: 18px; }
+  .introduction { padding-top: 0; padding-bottom: 24px; }
+  .draft-note { margin-top: 18px; }
+  h2 { font-size: 24px; }
+  .top-nav { justify-content: flex-start; }
+}
+
+@media (max-width: 360px) {
+  .page { padding-left: 18px; padding-right: 18px; }
+  .profile { grid-template-columns: minmax(0, 1fr) 90px; gap: 0 12px; }
+  h1 { font-size: 30px; }
+}
+
+@media print {
+  .page { max-width: none; padding: 0; }
+  .layout { grid-template-columns: 190px minmax(0, 1fr); gap: 35px; }
+  h1 { font-size: 27px; }
+  body { font-size: 11pt; }
+  .skip-link, .top-nav, footer a { display: none; }
+  .paper { break-inside: avoid; }
+  a { color: inherit; }
+}
