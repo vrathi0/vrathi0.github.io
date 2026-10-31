@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vaibhav Rathi | Economics, Stockholm University</title>
   <meta name="description" content="Vaibhav Rathi, PhD student in Economics at Stockholm University, on the 2026&ndash;27 job market. Research in political economy, economic development, and labor.">
+  <meta name="author" content="Vaibhav Rathi">
   <!-- Change to https://vaibhavrathi.com/ once the custom domain is live (also robots.txt and sitemap.xml). -->
   <link rel="canonical" href="https://vrathi0.github.io/">
   <!-- Google Search Console ownership check. Keep it, or verification lapses. -->
@@ -15,49 +16,49 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="page">
-    <!-- Remove hidden to try a small top-right menu instead of the no-menu layout. -->
-    <nav class="top-nav" aria-label="Main navigation" hidden>
-      <a href="#research">Research</a>
-      <a href="files/vaibhav-rathi-cv.pdf" target="_blank" rel="noopener">CV <span class="sr-only">(PDF, opens in a new tab)</span></a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <!-- Layout modelled on https://www.myerarashid.com/ (Task 6, 31 October 2026). -->
+    <header class="site-header">
+      <h1 class="site-name"><a href="./">Vaibhav Rathi</a></h1>
+      <!-- EDIT: menu. For a separate page, add e.g. <a href="teaching.html">Teaching</a>. -->
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#research">Research</a>
+        <a href="files/vaibhav-rathi-cv.pdf" target="_blank" rel="noopener">CV<span class="sr-only"> (PDF, opens in a new tab)</span></a>
+      </nav>
+    </header>
 
-    <div class="layout">
-      <header class="profile">
-        <!-- EDIT: name, position, photo, affiliation, email, and CV link. -->
-        <h1>Vaibhav Rathi</h1>
-        <p class="position">PhD student in Economics</p>
-        <img class="portrait" src="assets/vaibhav-rathi.jpg" width="919" height="1100" alt="Vaibhav Rathi outdoors" fetchpriority="high">
-        <div class="profile-details" id="contact">
-          <p>Department of Economics<br>Stockholm University<br><span class="muted">Stockholm, Sweden</span></p>
-          <p><a href="mailto:vaibhav.rathi@su.se">vaibhav.rathi@su.se</a></p>
-          <p><a href="files/vaibhav-rathi-cv.pdf" target="_blank" rel="noopener">Curriculum vitae <span class="file-type">PDF<span class="sr-only">, opens in a new tab</span></span></a></p>
+    <main id="main" tabindex="-1">
+      <section class="home-layout" aria-label="About">
+        <div class="home-photo">
+          <img class="portrait" src="assets/vaibhav-rathi.jpg" width="919" height="1100" alt="Vaibhav Rathi outdoors" fetchpriority="high">
         </div>
-      </header>
-
-      <main id="main" tabindex="-1">
-        <div class="introduction">
-          <!-- EDIT: biography, research interests, and job-market season. -->
-          <p class="intro-lead">I am a PhD student in Economics at Stockholm University.</p>
-          <p>My research interests are in political economy, economic development, and labor.</p>
-          <p>I will be on the <strong>2026&ndash;27 economics job market</strong>.</p>
+        <div class="home-text">
+          <!-- EDIT: biography, research interests, job-market season, CV link, and email. -->
+          <p>I am a PhD student in Economics at Stockholm University. My research interests are in political economy, economic development, and labor. <strong>I am on the 2026&ndash;27 economics job market.</strong></p>
+          <p>My CV is linked <a href="files/vaibhav-rathi-cv.pdf" target="_blank" rel="noopener">here<span class="sr-only"> (PDF, opens in a new tab)</span></a>.</p>
+          <p>I can be reached at <a href="mailto:vaibhav.rathi@su.se">vaibhav.rathi@su.se</a>.</p>
         </div>
+      </section>
 
-        <section id="research" aria-labelledby="jmp-heading">
-          <h2 id="jmp-heading">Job market paper</h2>
+      <div class="research" id="research">
+        <section class="research-section" aria-labelledby="jmp-heading">
+          <h2 id="jmp-heading">Job Market Paper</h2>
           <article class="paper">
-            <!-- Abstract: revised version supplied in chat (20 October 2026), with typo and wording fixes. No PDF is linked by request. -->
-            <h3>Political Influence, Bureaucratic Priorities, and Capital Accumulation in India</h3>
-            <p class="paper-description">Does political influence improve bureaucratic performance, or does it merely capture bureaucratic priorities for politically salient tasks? Using data from the Indian bureaucracy, and using alignment between the local politician and the state&rsquo;s ruling party as a measure of political influence, I show that alignment <em>causes</em> improvement in two flagship program outcomes, the rural employment guarantee program and rural roads construction program. If aligned politicians achieve this by capturing bureaucratic priority, the gains should have costs elsewhere. Using regulatory processing data on about 97,000 investment projects, I find that alignment of the local politician worsens the regulatory environment for private investment. When a close election brings an aligned politician into office, processing of government projects improves and processing of private investment projects slows. When turnover in the state government changes alignment status of a mid-term politician, the same pattern can be observed. If the local politician loses alignment mid-term, bureaucrats respond by shifting priorities away from government projects, and private projects benefit. Gaining alignment and losing alignment give effects of similar size and opposite sign, about 30-50 percent of baseline private-project processing. These results suggest that only measuring politically salient programs may overstate gains in bureaucratic performance where capacity is constrained, as any observed gains come at a cost elsewhere. The results also suggest one plausible explanation for why similar regulatory reforms produce different results: the capacity available to process regulations is politically mediated, and in low-capacity states politicians compete with private investors for the same scarce bureaucratic attention.</p>
+            <!-- Abstract: DRAFT 4 section/00-abstract.qmd (30 October 2026), with four grammar fixes. No PDF is linked by request. -->
+            <h3>Political Influence, Bureaucratic Priorities, and Regulatory Process in India</h3>
+            <!-- Each abstract is a native <details> toggle. Add the word open, as in <details class="abstract" open>, to show one expanded by default. -->
+            <details class="abstract">
+              <summary>Abstract<span class="sr-only">: Political Influence, Bureaucratic Priorities, and Regulatory Process in India</span></summary>
+              <p>Across 100 economies, the rules on the books explain less than half of the variation in how regulation works in practice. This paper studies one source of the gap: how the bureaucracy that processes regulatory approvals sets its priorities under political influence. I measure influence in India by alignment between the local Member of Parliament and the party governing the state, and link it to life-cycle records of large public and private capital investment projects. Two designs exploit independent sources of change in alignment. When a close election brings an aligned MP into office, the bureaucracy deploys more attention towards public projects at the expense of private projects. The probability that an announced private project is approved falls by about 6&nbsp;pp, some 55 percent of its baseline. When turnover in the state government changes an MP&rsquo;s alignment, the pattern reverses, and the rate of private project approvals rises by around 5.6&nbsp;pp. Total bureaucratic output as measured by total approvals across project types does not change. The results suggest that insulating the bureaucracy from political influence would speed regulatory processing for private investors, at some cost to the projects politicians favor.</p>
+            </details>
           </article>
         </section>
 
-        <section aria-labelledby="wip-heading">
+        <section class="research-section" aria-labelledby="wip-heading">
           <!-- EDIT: titles, coauthors, and abstracts are from the updated CV (cv/vaibhav-rathi-cv.qmd). -->
-          <h2 id="wip-heading">Work in progress</h2>
+          <h2 id="wip-heading">Work in Progress</h2>
           <article class="paper">
             <h3>Political Allocation of State Capacity</h3>
-            <details>
+            <details class="abstract">
               <summary>Abstract<span class="sr-only">: Political Allocation of State Capacity</span></summary>
               <p>This paper studies how shifts in local political influence reshape the subnational allocation of the bureaucratic state, even when aggregate bureaucratic strength and formal institutions remain fixed. I develop a framework in which heterogeneity in politicians&rsquo; influence within state-level posting markets, combined with bureaucrats&rsquo; career incentives, endogenously reallocates bureaucratic capacity across space. Using India&rsquo;s 2008 electoral delimitation, which quasi-randomly altered districts&rsquo; exposure to reserved caste politicians, I show that districts newly exposed to reserved constituencies experience a sharp and persistent decline in the flow of incoming bureaucrats, leading to a contraction in local state capacity (size effect) and systematic changes in officer type (composition effect). These effects are driven by the caste identity of the elected politicians rather than political turnover per se. I formalize two distinct channels that generate these effects: assortative matching and career concerns of bureaucrats and find evidence for both. More broadly, the paper documents an unintended effect of a political reform: policy aimed at increasing political representation also caused a decrease in the local state capacity.</p>
             </details>
@@ -66,24 +67,23 @@
           <article class="paper">
             <h3>Police funding inequality and police performance in US</h3>
             <p class="paper-meta">with Mitch Downey</p>
-            <details>
+            <details class="abstract">
               <summary>Abstract<span class="sr-only">: Police funding inequality and police performance in US</span></summary>
               <p>Police departments in the USA draw the majority of their funding from revenues generated by local governments. This means that funding for local police can be unequal within a metropolitan area among neighbouring cities. What are the consequences of this arrangement for the allocation of police officers, the quality of police representation in majority-minority communities, and aggregate crime and officer-involved violence? Using a shift-share instrument, we estimate the effects of increasing income inequality in MSAs with high levels of fiscal fragmentation (i.e., instances where the population is divided across many different legally and fiscally independent cities), both relative to increasing inequality when fragmentation is low, and relative to highly fragmented MSAs that do not see increasing inequality.</p>
             </details>
           </article>
         </section>
 
-        <section aria-labelledby="publications-heading">
+        <section class="research-section" aria-labelledby="publications-heading">
           <h2 id="publications-heading">Publications</h2>
           <article class="paper">
             <h3><a href="https://doi.org/10.1073/pnas.2218210120">Global biomass fires and infant mortality</a></h3>
             <p class="paper-meta">with Hemant K. Pullabhotla, Mustafa Zahid, Sam Heft-Neal, and Marshall Burke</p>
-            <p class="publication"><cite>Proceedings of the National Academy of Sciences</cite>, 2023, 120 (23): e2218210120.</p>
+            <p class="publication"><cite class="journal">Proceedings of the National Academy of Sciences</cite>, 2023, 120 (23): e2218210120.</p>
           </article>
         </section>
-        <footer><span>&copy; 2026 Vaibhav Rathi</span><a href="#main">Back to top <span aria-hidden="true">&uarr;</span></a></footer>
-      </main>
-    </div>
+      </div>
+    </main>
   </div>
 </body>
 </html>
