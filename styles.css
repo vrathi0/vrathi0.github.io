@@ -56,15 +56,19 @@ main { padding-bottom: 65px; }
 .publication { font-size: 14px; line-height: 1.5; }
 .journal { color: var(--green); font-weight: 600; }
 
-/* Abstract toggle: a native <details>, so it works without JavaScript */
-.abstract { margin: 4px 0; }
-.abstract summary { display: inline-block; cursor: pointer; color: var(--green); font-size: 13px; line-height: 1.5; list-style: none; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+/* Link row under each title: [Abstract] [Draft] [Slides] [Media].
+   [Abstract] is a native <details> toggle, so it works without JavaScript. The abstract text
+   is in the .abstract-text block after the row, so the links stay in place when it opens;
+   it is hidden while the toggle is closed. (Browsers older than 2023 just show it.) */
+.paper-links { display: flex; flex-wrap: wrap; align-items: baseline; column-gap: 12px; margin: 4px 0; }
+.abstract summary { display: inline-block; cursor: pointer; list-style: none; }
 .abstract summary::-webkit-details-marker { display: none; }
-.abstract summary::before { content: "["; }
-.abstract summary::after { content: "]"; }
-.abstract summary:hover { color: var(--green-dark); }
-.abstract[open] summary { margin-bottom: 2px; }
-.abstract p { margin: 6px 0 12px; color: var(--text); font-size: 15px; line-height: 1.6; }
+.abstract summary, .paper-links a { color: var(--green); font-size: 13px; line-height: 1.5; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px; }
+.abstract summary::before, .paper-links a::before { content: "["; }
+.abstract summary::after, .paper-links a::after { content: "]"; }
+.abstract summary:hover, .paper-links a:hover { color: var(--green-dark); }
+.paper:has(.abstract:not([open])) .abstract-text { display: none; }
+.paper .abstract-text p { margin: 6px 0 12px; color: var(--text); font-size: 15px; line-height: 1.6; }
 
 .skip-link { position: absolute; top: 8px; left: 16px; padding: 6px 12px; background: #fff; transform: translateY(-180%); }
 .skip-link:focus { transform: translateY(0); }
@@ -86,12 +90,12 @@ main { padding-bottom: 65px; }
   .site-nav a { font-size: 15px; }
   .paper h3 { font-size: 15px; }
   .research-section h2 { font-size: 17px; }
-  .abstract p { font-size: 14px; }
+  .paper .abstract-text p { font-size: 14px; }
 }
 
 @media print {
   .page { width: auto; }
-  .skip-link, .site-nav, .abstract summary { display: none; }
+  .skip-link, .site-nav, .paper-links { display: none; }
   .paper { break-inside: avoid; }
   a { color: inherit; }
 }
